@@ -6,8 +6,8 @@ from pylab import *
 from numpy import *
 
 def get_imlist(path):
-    return [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.jpg') or f.endswith('.jpeg')]
-    Image.open(get_imlist(os.getcwd())[0])
+    return [os.path.join(path,f) for f in os.listdir(path) if f.endswith('.jpg') or f.endswith('.jpeg') or  f.endswith('.tif')]
+    ##Image.open(get_imlist(os.getcwd())[0])
 
 def imresize(im,sz):
     pil_im = Image.fromarray(uint8(im))
